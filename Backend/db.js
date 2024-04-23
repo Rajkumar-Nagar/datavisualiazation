@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const connectDB=async()=>{
     try {
         const connectionIndtanse=await mongoose.connect(
-            "mongodb+srv://rajkumarnagar264:raj123@cluster0.mvrxctz.mongodb.net/RestApi"
+          process.env.MONGOURI,
         )
         console.log(`mongoose connected !! DB Host : ${connectionIndtanse.connection.host}` )
 
